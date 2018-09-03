@@ -1,0 +1,149 @@
+.big {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url(../csj_img/1.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.neirong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8.507rem;
+  height: 10.467rem;
+  background-color: rgba(255, 255, 255, 0.39);
+}
+.camera {
+  width: 1.387rem;
+  height: 1.387rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+  margin-top: 0.693rem;
+}
+.camera img {
+  transform: scale(1.19);
+  width: 100%;
+  height: 100%;
+}
+.name {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  margin-top: 0.867rem;
+}
+.name input {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  text-align: center;
+  background: url(../csj_img/用户名.png) 0.587rem 0.28rem no-repeat, url(../csj_img/对.png) 6.56rem 0.36rem no-repeat;
+  background-size: 0.347rem 0.4rem,0.32rem 0.24rem;
+  background-color: #ffffff;
+}
+.password {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  margin-top: 0.263rem;
+}
+.password input {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  text-align: center;
+  background: url(../csj_img/锁.png) 0.587rem 0.28rem no-repeat, url(../csj_img/首页—注册1_03.png) 6.56rem 0.36rem no-repeat;
+  background-size: 0.347rem 0.4rem,0.32rem 0.24rem;
+  background-color: #ffffff;
+}
+.repeatword {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  margin-top: 0.263rem;
+}
+.repeatword input {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  text-align: center;
+  background: url(../csj_img/重复密码.png) 0.587rem 0.28rem no-repeat, url(../csj_img/对.png) 6.56rem 0.36rem no-repeat;
+  background-size: 0.347rem 0.4rem,0.32rem 0.24rem;
+  background-color: #ffffff;
+}
+.email {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  margin-top: 0.263rem;
+}
+.email input {
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  text-align: center;
+  background: url(../csj_img/FJ_个人中心_我的帐户_邮箱.png) 0.587rem 0.28rem no-repeat, url(../csj_img/对.png) 6.56rem 0.36rem no-repeat;
+  background-size: 0.347rem 0.4rem,0.32rem 0.24rem;
+  background-color: #ffffff;
+}
+.check {
+  display: flex;
+  width: 7.16rem;
+  height: 1.027rem;
+  border-radius: 0.133rem;
+  margin-top: 0.263rem;
+}
+.check input {
+  width: 0.387rem;
+  height: 0.48rem;
+}
+.checkbox_span {
+  margin-left: 0.5rem;
+  font-size: 11px;
+}
+[data-dpr='2'] .checkbox_span {
+  font-size: 22px;
+}
+[data-dpr='3'] .checkbox_span {
+  font-size: 33px;
+}
+[data-dpr='4'] .checkbox_span {
+  font-size: 44px;
+}
+.button {
+  display: flex;
+  width: 7.16rem;
+  height: 1.027rem;
+  margin-top: 0.263rem;
+  justify-content: space-around;
+}
+.button .btn1 {
+  width: 2.013rem;
+  height: 0.787rem;
+  background-color: #2d37ff;
+  border-radius: 0.133rem;
+  border: 0;
+}
+.button .btn2 {
+  width: 2.013rem;
+  height: 0.787rem;
+  background-color: #2d37ff;
+  border-radius: 0.133rem;
+  border: 0;
+}
+.btn_zi {
+  color: white;
+  font-size: 16px;
+}
+[data-dpr='2'] .btn_zi {
+  font-size: 32px;
+}
+[data-dpr='3'] .btn_zi {
+  font-size: 48px;
+}
+[data-dpr='4'] .btn_zi {
+  font-size: 64px;
+}
