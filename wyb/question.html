@@ -13,8 +13,9 @@
     </header>
     <div class="main">
     	<div class="question bl">
-    		<input type="text" name="" placeholder="请输入问题并以问题结尾" class="inputq1">
+    		<input type="text" id='search' name="" placeholder="请输入问题并以问题结尾" class="inputq1">
     	</div>
+        <div class="jieguo">
     	<div class="question bk">
     		<p class="f1 weight">滴滴打成前景如何?</p>
     		<p class="gray"><span>3k</span>关注，<span>787</span>个回答</p>
@@ -35,6 +36,7 @@
     		<p class="f1 weight">滴滴打成前景如何?</p>
     		<p class="gray"><span>3k</span>关注，<span>787</span>个回答</p>
     	</div>
+        </div>
     </div>
     <div class="bottom">
     	<div class="write">
@@ -54,4 +56,17 @@
     </div>
 </body>
 <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+
+<script type="text/javascript" src="js/template-web.js"></script>
+<script type="text/html" id='article'>
+    <div class='article'>
+        <div class="question bk">
+            <p class="f1 weight">{{art_title}}</p>
+            <p class="gray"><span>3k</span>关注，<span>787</span>个回答</p>
+        </div>
+    </div>
+</div>
+</script>
+<script type="text/javascript" src="js/question.js"></script>
 </html>

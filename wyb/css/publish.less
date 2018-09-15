@@ -1,0 +1,250 @@
+// 清除默认样式-------------------------------------------------------------------------------------
+a:link{text-decoration: none!important;}
+a:visited{text-decoration: none!important;}
+a:hover{text-decoration: none!important;}
+a:active{text-decoration: none!important;}
+a:focus{text-decoration: none!important;}
+a {color: black;}
+body {
+    background-color: rgb(47, 179, 240);
+}
+// 发表文章的头部------------------------------------------------------------------------------
+.F_article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 1.68rem;
+    background-color: rgb(47, 179, 240);
+    .F_publish_article {
+        margin-left: 0.547rem;
+        margin-top: 0.533rem;
+    }
+    .F_publish_issue {
+        border-radius: 0.1rem;
+        border: 1px solid white;
+        background-color: rgb(47, 179, 240);
+        margin-right: 0.547rem;
+        margin-top: 0.533rem;
+        width: 1.953rem;
+        height: 0.774rem;
+    }
+}
+.F_icon_one {
+    margin-left: 0.2rem;
+}
+// 添加标题--------------------------------------------------------------
+.bt_d {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1.373rem;
+    .bt {
+        box-shadow:inset 0 0 0.5rem black;
+        width: 83%;
+        height: 4.027rem;
+        padding: 0.5rem;
+        border: 0;
+    }
+}
+// 文章text内容--------------------------------------------------------------------------------
+.F_text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // width: 10rem;
+    height: 5.027rem;
+    .F_text_textarea {
+        box-shadow:inset 0 0 0.5rem black;
+        // width: 8.3rem;
+        width: 83%;
+        height: 4.027rem;
+        padding: 0.5rem;
+        border: 0;
+    }
+}
+// 给文章添加图片----------------------------------------------------------------------------
+.fb-tp {
+    margin-left: 0.4rem;
+    width: 2rem;
+    height: 2rem;
+}
+// .fb-from {
+//     width: 1.8rem;
+//     height: 1.8rem;
+//     overflow: hidden;
+// }
+.pb-td {
+    margin-left: 0.25rem;
+    position: absolute;
+}
+.fb-ib {
+    opacity: 0;
+    width: 1rem;
+}
+.d_img-d {
+    width: 2rem;
+    height: 1.4rem;
+    overflow: hidden;
+    background-color: red;
+}
+.fb-from img {
+    width: 2rem;
+    height: 1.4rem;
+}
+
+// 所在位置----------------------------------------------------------------------------------
+.F_location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1.373rem;
+    margin-bottom: 0.1rem;
+    background-color: #fff;
+    .F_location_icon {
+        margin-left: 0.32rem;
+    }
+    .F_location_span {
+        letter-spacing: 0.05rem;
+        margin-left: 0.32rem;
+    }
+}
+//添加图片------------------
+
+
+
+
+
+
+
+
+
+
+
+//底部公共样式-----------------------------------------------------------------------------
+.F_nav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    .F_nav_page {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .F_nav_page:active {
+        background-color: rgb(250, 250, 250);
+    }
+}
+
+//封装字体样式----------------------------------------------------------------------------------
+.F_font { 
+    font-size: 15px; 
+}
+[data-dpr="2"] .F_font { 
+    font-size: 30px; 
+}
+[data-dpr="3"] .F_font { 
+    font-size: 45px; 
+}
+[data-dpr="4"] .F_font { 
+    font-size: 60px; 
+}
+
+.F_add_image_font { 
+    font-size: 30px; 
+}
+[data-dpr="2"] .F_add_image_font { 
+    font-size: 60px; 
+}
+[data-dpr="3"] .F_add_image_font { 
+    font-size: 90px; 
+}
+[data-dpr="4"] .F_add_image_font { 
+    font-size: 120px; 
+}
+
+.F_minfont { 
+    font-size: 12px; 
+}
+[data-dpr="2"] .F_minfont { 
+    font-size: 24px; 
+}
+[data-dpr="3"] .F_minfont { 
+    font-size: 36px; 
+}
+[data-dpr="4"] .F_minfont { 
+    font-size: 48px; 
+}
+// 封装字体图标样式--------------------------------------------------------------------
+.F_font_icon { 
+    font-size: 27px; 
+}
+[data-dpr="2"] .F_font_icon { 
+    font-size: 54px; 
+}
+[data-dpr="3"] .F_font_icon { 
+    font-size: 81px; 
+}
+[data-dpr="4"] .F_font_icon { 
+    font-size: 110px; 
+}
+
+// 封装字体颜色-------------------------------------------------------------------------
+.F_color {
+    color: white;
+}
+.F_color_b {
+    color:skyblue;
+}
+.F_color_h {
+    color: #7f868a;
+}
+.F_color_p {
+    color:pink;
+}
+.F_color_y {
+    color: rgb(208, 243, 176)
+}
+.F_color_z {
+    color: rgb(187, 157, 236)
+}
+
+//封装字体间隙-------------------------------------------------------------------------
+.F_letter_s {
+    letter-spacing: 0.1rem;
+}
+//封装字体图标样式----------------------------------------------------------------------
+.F_header_icon_font { 
+    font-size: 18px; 
+}
+[data-dpr="2"] .F_header_icon_font { 
+    font-size: 36px; 
+}
+[data-dpr="3"] .F_header_icon_font { 
+    font-size: 54px; 
+}
+[data-dpr="4"] .F_header_icon_font { 
+    font-size: 72px; 
+}
+.F_label_icon {
+    font-size: 15px;
+}
+[data-dpr="2"] .F_label_icon { 
+    font-size: 30px; 
+}
+[data-dpr="3"] .F_label_icon { 
+    font-size: 45px; 
+}
+[data-dpr="4"] .F_label_icon { 
+    font-size: 60px; 
+}
+//封装隔离线---------------------------------------------------------------------------
+.F_wire {
+    margin-left: 3.5%;
+    height: 0.05rem;
+    width: 93%;
+    background-color: rgb(247, 167, 204);
+}

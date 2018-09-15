@@ -28,11 +28,11 @@ $(function(){
             dataType:'json',
             data:{'op':'doshowbycollectnum'},
             success:function(data){
-                $.each(data,function(index,value){
+                  console.log(data);
+                  $.each(data,function(index,value){
                     var result = template('article',value);
+                    // $(result).prependto($'.content');
                     $('.content').append(result);
-                })
-            test();   
             },
             error: function(){
             alert("发生未知错误");
@@ -61,7 +61,7 @@ $(function(){
             }
       })
   }
-  aj();
+  // aj();
    
          // 推荐
     $('#tj').on('tap',function(){
@@ -86,12 +86,12 @@ $(function(){
     $('#gz').on('tap',function(){
           $('.content').children().remove();
           $.ajax({
-            url:'my.json',
+            url:'articleServlet',
             type:'GET',
             dataType:'json',
             data:{'op':'doadd'},
             success:function(data){
-                $.each(data.data,function(index,value){
+                $.each(data,function(index,value){
                     var result = template('article',value);
                     $('.content').append(result);
                 })
@@ -147,5 +147,11 @@ $(function(){
                 
         }
     }, false);
+
+
+
+    $('.wyb').click(function(){
+      location.href='cz_PasswordLogin.html';
+    })
 
 })

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑我的个人资料</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/publish.css">
+	<link rel="stylesheet" href="css/Edit_my_profile.css">
+	<script type="text/javascript" src="zepto.min.js"></script>
+	<script type="text/javascript" src="js/Edit_my_profile.js"></script>
+</head>
+<body>
+	<!-- 个人资料头部 -->
+	<div class="F_profile_header">
+		<!-- 返回按钮 -->
+		<div class="fh F_header_icon fanhui">
+			<i class="iconfont icon-x1 F_color_b F_header_icon_font"></i>
+		</div>
+		<!-- 页面text标志 -->
+		<div class="F_header_text F_letter_s F_color_b F_font">
+			<span>编辑个人资料</span>
+		</div>
+		<!-- 保存按钮 需要协助 -->
+		<div class="F_header_save F_color_b F_font" id="btn_save">
+			<span class="F_save_a">保存</span>
+		</div>
+	</div>
+	<!-- 头像 -->
+	<div class="F_add_img">
+		<div class="tjtxfj">
+			<span class="c_span F_font F_color_b">点我添加</span>
+			<form class="f_form" name="form0" id="form0">
+				<input type="file" class="input-img" name="file0" id="file0" multiple="multiple" /><br>  
+				<div class="d_img-d">
+					<img class="f_img-j" src="imgs/F-bg.jpg" id="img0">
+				</div>
+			</form>  
+		</div>
+	</div>
+    <!--个人资料input的位置需要交互-->
+    <div>
+    	<div class="F_content_input">
+    		<i class="F_content_icon iconfont icon-yonghu F_font_icon F_color_h"></i>
+    		<!-- 用户名输入框 -->
+    		<input type="text" id="f_name" class="F_font F_letter_s" placeholder="用户名">
+    	</div>
+    	<div class="F_content_input F_int_man F_font">
+    		<i class="F_content_icon iconfont icon-nannvshen F_color_z F_font_icon"></i>
+    		<!-- 男女选项 -->
+    		<input type="checkbox" class="chk_1 ch_k1" ><span  class=" F_color_h">男</span><input class="chk_1 ch_k2" type="checkbox"><span class=" F_color_h">女</span>
+    	</div>
+    	<div class="F_content_input">
+    		<i class="F_content_icon iconfont icon-yinhao F_color_y F_font_icon"></i>
+    		<!-- 自我描述 -->
+    		<input type="text" class="F_font F_letter_s zwms" id="zwms" placeholder="自我描述">
+    	</div>
+    	<div class="F_content_input">
+    		<i class="F_content_icon iconfont icon-shelf F_color_p F_font_icon"></i>
+    		<!-- 行业选择 -->
+    		<input type="text" class="F_font F_letter_s hyxz" id="hyxz" placeholder="行业选择">
+    	</div>
+    	<div class="F_content_input">
+    		<i class="F_content_icon iconfont icon-wenzhang F_color_b F_font_icon"></i>
+    		<!-- 个人介绍 -->
+    		<input type="text" class="F_font F_letter_s grjs" id="grjs" placeholder="个人介绍">
+    	</div>
+    </div>
+		<script>
+			$("#file0").change(function(){  
+				//获取图片信息
+				objUrl = getObjectURL(this.files[0]);
+				//判断 给图片加上src
+				console.log(objUrl);
+				if (objUrl) {  
+					$("#img0").attr("src", objUrl);  
+				}   
+				$('#btn_save').click(function(){
+					var tpd = objUrl;
+					var yhm = $('#f_name');
+					var zwms = $('#zwms');
+					var hyxz = $('#hyxz');
+					var grjs = $('#grjs');
+					var n = $('.ch_k1');
+					var v = $('.ch_k2');
+					if (yhm.val().length == "") {
+						alert('用户名不得为空');
+					} else {
+						if (yhm.val().length > 2 && yhm.val().length <10) {
+							if (n.prop('checked') && v.prop() ) {
+								var nan = '男';
+								var obj = {
+									yhm : yhm.val(),
+									xb : nan,
+									zwms : zwms.val(),
+									hyxz : hyxz.val(),
+									grjs : grjs.val()
+								}
+								console.log(objUrl)
+								var nan = '男';
+								console.log(tpd);
+								$.ajax({
+									url:"../userServlet",
+									type:"POST",
+									dataType:"json",
+									data:{
+										"userID" : 2,
+										"name":$('#f_name').val(),
+										"gender":nan,
+										"desc":$('#zwms').val(),
+										"introduce":$('#hyxz').val(),
+										"work":$('#grjs').val(),
+										"picture":tpd,
+										"op":"alertUser"
+									},
+									success:function(data){
+										console.log(data);
+										if (data[0].flag == 1) {
+											console.log('保存成功');
+											location.reload();
+										} else {
+											console.log('保存失败');
+										}
+									}
+								});
+							} else if (v.prop('checked') && n.prop()) {
+								var nv = '女';
+								var obj2 = {
+									yhm : yhm.val(),
+									xb : nv,
+									zwms : zwms.val(),
+									hyxz : hyxz.val(),
+									grjs : grjs.val()
+								}
+								var nv = '女';
+								console.log(tpd);
+								$.ajax({
+									url:"../userServlet",
+									type:"POST",
+									dataType:"json",
+									data:{
+										"userID" : 2,
+										"name":$('#f_name').val(),
+										"gender":nan,
+										"desc":$('#zwms').val(),
+										"introduce":$('#hyxz').val(),
+										"work":$('#grjs').val(),
+										"picture":tpd,
+										"op":"alertUser"
+									},
+									success:function(data){
+										console.log(data);
+										if (data[0].flag == 1) {
+											console.log('保存成功');
+											location.reload();
+										} else {
+											console.log('保存失败');
+										}
+									}
+								});
+							} else {
+								alert('没有选择性别');
+							}
+						} else {
+							$('#f_name').val('');
+							alert('用户名小于2或者大于10');
+						}
+					}
+				});
+			});  
+			function getObjectURL(file) {  
+				var url = null;  
+				if (window.createObjectURL!=undefined) {  
+					url = window.createObjectURL(file) ;  
+				} else if (window.URL!=undefined) { // mozilla(firefox)  
+						url = window.URL.createObjectURL(file) ;  
+				} else if (window.webkitURL!=undefined) { // webkit or chrome  
+						url = window.webkitURL.createObjectURL(file) ;  
+				}  
+				return url;  
+			}  
+		</script>
+        <!-- 下面红桃心 -->
+	<div class="F_profile_logo">
+		<div class="F_profile_logoimg htx">
+			<i class="F_color_p iconfont icon-ganxie xhtx F_font_icon"></i>
+		</div>
+	</div>
+    </body>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    </html>

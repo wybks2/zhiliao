@@ -1,0 +1,105 @@
+a {
+  text-decoration: none;
+  color: #fff;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.fanhui {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  font-size: 0.8rem;
+}
+.fanhui img {
+  width: 1rem;
+  height: 1rem;
+}
+.total {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  overflow: hidden;
+  background: url(../imgs/csj_6.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+#v {
+  width: 6rem;
+  height: 4rem;
+}
+#qr-canvas {
+  display: none;
+}
+.scanning_frame {
+  margin: 5rem auto;
+  width: 6rem;
+  height: 4rem;
+  border: 3px solid #000;
+  position: relative;
+}
+.infor {
+  text-align: center;
+  line-height: 2rem;
+  background: #d81e06;
+  color: #fff;
+  border-radius: 2rem;
+  opacity: 0.6;
+  margin: 0 auto;
+}
+/*加载动画效果*/
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 2.5rem;
+  /*background-color: #fff;*/
+}
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d81e06;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
+}
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
